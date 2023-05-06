@@ -1,5 +1,7 @@
 package models;
 
+import java.util.ArrayList;
+
 public class Client {
     /*
      * Attributs => Caracteristiques
@@ -10,6 +12,7 @@ public class Client {
     private int id;
     private String nomComplet;
     private String telephone;
+;
     /*
      * Methodes => 
      *  fonctions => type de retour est !void 
@@ -42,6 +45,15 @@ public class Client {
           ==> Metiers
             ==> offre un autre service autre que la construction , les getters ou setters
      */
+
+   //OneToMany
+   private ArrayList<Compte> comptes=new ArrayList<>();
+     public ArrayList<Compte> getComptes() {
+      return comptes;
+   }
+     public void addCompte(Compte compte){
+        comptes.add(compte);
+     }
 
      public Client(){
 
